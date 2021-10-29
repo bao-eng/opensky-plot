@@ -26,7 +26,7 @@ int main() {
   std::unordered_map<std::string, size_t> countries;
 
   for (json &c : j["states"]) {
-    if (!c[5].is_null() && !c[5].is_null()) {
+    if (!c[5].is_null() && !c[6].is_null()) {
       auto origin_country = c[2].get<std::string>();
       fleets[origin_country].second.push_back(c[5].get<double>());
       fleets[origin_country].first.push_back(c[6].get<double>());
